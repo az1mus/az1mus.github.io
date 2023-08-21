@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/pigeon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/pigeon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"az1mus.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"width":200},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="新域名完成祭">
+<meta property="og:type" content="article">
+<meta property="og:title" content="让 Github Page 与免费域名绑定">
+<meta property="og:url" content="https://az1mus.github.io/2019/05/11/Make-GithubPage-Bound-to-a-Free-Domain/index.html">
+<meta property="og:site_name" content="Az1mus☆">
+<meta property="og:description" content="新域名完成祭">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvul93epj20nu0fy43t.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvukx8ryj20lt03iab2.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvukr3nzj20el01fmxr.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvul0v6hj20s406jju7.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvuknxvxj20s701oq3g.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvul4ph6j20t60afq5x.jpg">
+<meta property="article:published_time" content="2019-05-11T15:57:00.000Z">
+<meta property="article:modified_time" content="2023-08-21T12:04:21.894Z">
+<meta property="article:author" content="az1mus">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="网络">
+<meta property="article:tag" content="github pages">
+<meta property="article:tag" content="免费域名">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvul93epj20nu0fy43t.jpg">
+
+
+<link rel="canonical" href="https://az1mus.github.io/2019/05/11/Make-GithubPage-Bound-to-a-Free-Domain/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://az1mus.github.io/2019/05/11/Make-GithubPage-Bound-to-a-Free-Domain/","path":"2019/05/11/Make-GithubPage-Bound-to-a-Free-Domain/","title":"让 Github Page 与免费域名绑定"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>让 Github Page 与免费域名绑定 | Az1mus☆</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Az1mus☆</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%9F%9F%E5%90%8D%E5%AE%8C%E6%88%90%E7%A5%AD"><span class="nav-number">1.</span> <span class="nav-text">新域名完成祭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Github-Pages"><span class="nav-number">3.1.</span> <span class="nav-text">Github Pages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D"><span class="nav-number">3.2.</span> <span class="nav-text">域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS"><span class="nav-number">3.3.</span> <span class="nav-text">DNS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github-Repo"><span class="nav-number">3.4.</span> <span class="nav-text">Github Repo</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="az1mus"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">az1mus</p>
+  <div class="site-description" itemprop="description">Ciallo～(∠・ω< )⌒★</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/az1mus" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;az1mus" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://az1mus.github.io/2019/05/11/Make-GithubPage-Bound-to-a-Free-Domain/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="az1mus">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Az1mus☆">
+      <meta itemprop="description" content="Ciallo～(∠・ω< )⌒★">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="让 Github Page 与免费域名绑定 | Az1mus☆">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          让 Github Page 与免费域名绑定
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-05-11 23:57:00" itemprop="dateCreated datePublished" datetime="2019-05-11T23:57:00+08:00">2019-05-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-08-21 20:04:21" itemprop="dateModified" datetime="2023-08-21T20:04:21+08:00">2023-08-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BD%91%E7%AB%99%E3%80%81%E5%8D%9A%E5%AE%A2%E4%B8%8EMarkdown/" itemprop="url" rel="index"><span itemprop="name">网站、博客与Markdown</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="新域名完成祭"><a href="#新域名完成祭" class="headerlink" title="新域名完成祭"></a>新域名完成祭</h2><span id="more"></span>  
+
+<p>之前逛洛谷日报的时候，看到大佬发了一份贴域名的教程。（–&gt;<a target="_blank" rel="noopener" href="https://www.cokemine.com/wp-hxo.html">原文</a>）<br>本来抱着激动的心情来弄，结果中途由于咱太笨，遇到了一些没见过的错误。比如，以为A Record是自动生成的之类的，因为以前从来没有接触过DNS解析什么的，所以几乎理解不能。<br>后来咱自觉地STFB，找了很多教程，但是大多步骤不全或有问题，导致一直没有弄好。经历了各种碰壁之后，咱终于成功把博客挂在了自己的域名上！  </p>
+<p>以下正文  </p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>阅读时间：30 sec<br>拥有一个域名。<br>拥有一个Github Page。<br>这个 Github Page 被塞在 github 的某一个服务器上。<br>咱用DNS把这个域名解析到这个服务器。<br>咱最后通过github内部的设置，把这个page拎出来，挂在域名上。<br>Access!<br>（然后，咱不明白为什么有了github自己的DNS解析，还要再弄一个第三方DNS…不管了，反正加一个又不会死人！）</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>阅读时间：4 min<br>预计操作时间：20 ~ 90(or 20 ~ 2147483647) min</p>
+<h3 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h3><p>请自行查找文档。咱使用Github Pages + Hexo + nexT构建博客。  </p>
+<h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><p>在完成博客页面的初始化后，github的服务器会自动在一个ip上面挂上汝等的页面，并且在<code>github.io</code>这个顶级域名前面加上汝的nickname，这里假设汝名为<code>julao</code>，那么汝就可以在<code>julao.github.io</code>这个域名看到自己的网站了。<br>而咱们今天的重点，就是把这个长得又丑又长的<code>\*.github.io</code>变得简明扼要，比如咱的<a target="_blank" rel="noopener" href="https://wuyuema.cf/">wuyuema.cf</a>。<br>首先，汝等想要有这样一行域名，没有几两银子是不行的。要是天底下的域名都免费，一个人只要从第一个字符到最后一个字符全排列一下，就没有空闲的域名给汝等用了。因此，几乎所有的域名，都__不是免费__的，也都__不是永久__的。<br>然而如果汝等看到这里就打起了退堂鼓，可是会被咱好好嘲讽一番的。咱的标题都说了，咱有办法给汝的狗窝贴上免费的域名。<br><a target="_blank" rel="noopener" href="https://www.freenom.com/"><strong>Freenom</strong></a>是一个公益的网站，提供每12个月$0的域名。咱们今天就用这个网站注册域名。<br>注册好账户然后登入进去。  </p>
+<blockquote>
+<ol>
+<li>在顶部的<code>Services--&gt;Register a New Domain</code>里面，输入你想要的名字，比如<code>chickURSoBeautiful</code>，<code>Check Availability</code>。  </li>
+<li>在<code>.tk</code>、<code>.ml</code>、<code>.ga</code>、<code>.cf</code>、<code>gq</code>里面挑一个点<code>Get it now! </code>，<code>Checkout</code>。  </li>
+<li><code>Period</code>调成<code>12 Month @ FREE</code>，<code>Use your new domain</code>选择<code>Use DNS--&gt;Use your own DNS</code>。  </li>
+<li>两个<code>Nameserver</code>分别填上<code>f1g1ns1.dnspod.net</code>和<code>f1g1ns2.dnspod.net</code>。（这两个是dnspod的ns服务器地址，先随便填两个，后面再改）  </li>
+<li><code>Continue</code>，在<code>Your Details</code>里面随便填上一些随机字符糊弄一下，勾上<code>I have read and agree to the Terms &amp; Conditions</code>，<code>Complete Order</code>。  </li>
+<li>等一会儿，就可以在<code>Services--&gt;My Domains</code>里面查看域名状态了。点<code>Manage Domain--&gt;Manegement Tools--&gt;Nameservers</code>，勾选<code>Use default nameservers (Freenom Nameservers)</code>。</li>
+</ol>
+</blockquote>
+<h3 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h3><p>咱们今天以<a href="www.cloudflare.com"><strong>Cloudflare</strong></a>为免费DNS解析服务商。何为而择其国外服务商焉？以国内须备案，弃之。<br>注册好账号然后登录进去。  </p>
+<blockquote>
+<ol>
+<li><code>Add Site</code>，输入你刚刚注册的域名。  </li>
+<li>一路确认，注意要选择免费的选项。  </li>
+<li>在这里截图，复制框框里面的ns地址。<br><img src="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvul93epj20nu0fy43t.jpg">  </li>
+<li>回到freenom的网站管理页面，<code>Manage Domain--&gt;Manegement Tools--&gt;Nameservers</code>，勾选<code>Use custom nameservers (enter below)</code>，把Nameserver 1和2换成你刚刚复制的地址。  </li>
+<li>回到cloudflare的操作页面，点<code>Continue</code>，进入解析管理。等一<del>小</del>会儿（几分钟~十几小时），刷新，直到——<br><img src="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvukx8ryj20lt03iab2.jpg">  </li>
+<li>得到汝自己的xxx.github.io所在服务器的ip地址。具体操作：<br><code>ping julao.github.io</code>  </br><br><img src="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvukr3nzj20el01fmxr.jpg">  </li>
+<li>添加A记录。像这样填：<br><img src="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvul0v6hj20s406jju7.jpg">  ip地址从185.199.108.153到185.199.xxx+1.153(xxx是汝ping的数字)的A记录都加上最好，玄学。  </li>
+<li>添加CNAME。像这样填：<br><img src="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvuknxvxj20s701oq3g.jpg">  填完了之后像这样子：<br><img src="https://ws1.sinaimg.cn/large/69bcb682gy1g2yvul4ph6j20t60afq5x.jpg"></li>
+</ol>
+</blockquote>
+<h3 id="Github-Repo"><a href="#Github-Repo" class="headerlink" title="Github Repo"></a>Github Repo</h3><p>最后是github仓库的设置。打开汝等的***.github.io的设置，找到<code>Custom Domain</code>，输入刚刚注册的域名，save，等一会儿，勾选下面的<code>Enforce HTTPS</code>。当看到这个提示的时候，操作成功。现在应该能够直接从新域名访问页面了！<br>不过呢，如果就这么结束的话，以后的每一次hexo更新操作都会把Custom Domain重置。为了解决问题，需要在hexo中继续设置。 </p>
+<blockquote>
+<ol>
+<li>修改<code>~/_config.yml</code>，找到并将url改成自己的。</li>
+<li>在<code>~/source/</code>下，新建空白文件，命名为CNAME，内容如下：  <pre><code>yoursite.xx
+www.yoursite.xx
+</code></pre>
+</li>
+</ol>
+</blockquote>
+<p>然后<code>hexo clean</code>、<code>hexo g -d</code>。</p>
+<p>完结撒花！！！<br>P.S. PicGo真好用ωωω</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag"># 网络</a>
+              <a href="/tags/github-pages/" rel="tag"># github pages</a>
+              <a href="/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D/" rel="tag"># 免费域名</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/05/04/How-To-Make-Chicken-Row/" rel="prev" title="今晚吃炸鸡排">
+                  <i class="fa fa-angle-left"></i> 今晚吃炸鸡排
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/03/16/Fixing-Your-Gpedit/" rel="next" title="Windows 启用组策略">
+                  Windows 启用组策略 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="star-o"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">az1mus</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
